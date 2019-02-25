@@ -61,13 +61,7 @@ if __name__ == '__main__':
     except yaml.YAMLError as exc:
       print(exc)
       exit
-##############################################
-
-#  y[config]["port"]
-#  if len(sys.argv[2]) >0:
-#     config = sys.argv[2]
-#  else:
-#     
+############################################## 
 	 
   try:
      config = sys.argv[2]
