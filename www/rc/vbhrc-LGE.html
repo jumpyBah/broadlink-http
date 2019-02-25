@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<head>
+    <title>TV Remote</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="stylesheet" href="vbhrc.css"/>
+	<meta content="Telecomando" name="description" />
+</head>
+
+<body style="background-color: #C5CCD4;	
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 10px;
+    background: #c8c8c8 url(pinstripes.png);">
+<div id="navi" class="navbar">	
+	<img style="top: 5px; left: 5px;position: absolute;"  src="images/LGE.png" OnClick="window.history.back() ; "/ >
+	<div id="g">Lg</div>
+</div>
+
+<script type="text/javascript">
+key_msg ="" ;
+function kp(msg) { //engine xml
+	var stat="";
+	var send_msg = 'LGE' ;
+    url = "http://192.168.1.214:8321/send/" +  send_msg + "-" + msg ; 
+    if (window.XMLHttpRequest) { // Non-IE browsers
+      	req = new XMLHttpRequest();
+      	try {
+        	req.open("GET", url, true);		
+			req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");			
+      		} catch (e) {
+				alert(e);
+			}
+		req.send();
+    }     
+	return(stat);
+}
+</script>
+
+<div id="kpon"  class="kbd" OnCLick="kp('PON')" >ON</div>
+<div id="kpoff"  class="kbd" OnCLick="kp('POFF')" >OFF</div>
+
+<div id="k1"  class="kbd" OnCLick="kp('K1')" >1</div>
+<div id="k2"  class="kbd" OnCLick="kp('K2')" >2</div>
+<div id="k3"  class="kbd" OnCLick="kp('K3')" >3</div>
+<div id="k4"  class="kbd" OnCLick="kp('K4')" >4</div>
+<div id="k5"  class="kbd" OnCLick="kp('K5')" >5</div>
+<div id="k6"  class="kbd" OnCLick="kp('K6')" >6</div>
+<div id="k7"  class="kbd" OnCLick="kp('K7')" >7</div>
+<div id="k8"  class="kbd" OnCLick="kp('K8')" >8</div>
+<div id="k9"  class="kbd" OnCLick="kp('K9')" >9</div>
+<div id="k0"  class="kbd" OnCLick="kp('K0')" >0</div>
+
+<div id="kU"  class="kbd" OnCLick="kp('UP')" ><img src="images/36/arrow-up-bold.png" /></div>
+<div id="kL"  class="kbd" OnCLick="kp('LF')" ><img src="images/36/arrow-left-bold.png" /></div>
+<div id="kOK"  class="kbd" OnCLick="kp('OK')" >OK</div>
+<div id="kR"  class="kbd" OnCLick="kp('RG')" ><img src="images/36/arrow-right-bold.png" /></div>
+<div id="kD"  class="kbd" OnCLick="kp('DN')" ><img src="images/36/arrow-down-bold.png" /></div>
+
+<div id="kVU"  class="kbd" OnCLick="kp('VOLU')" ><img src="images/36/volume-plus.png" /></div>
+<div id="kVD"  class="kbd" OnCLick="kp('VOLD')" ><img src="images/36/volume-minus.png" /></div>
+<div id="kPU"  class="kbd" OnCLick="kp('CHU')" >Ch+</div>
+<div id="kPD"  class="kbd" OnCLick="kp('CHD')" >Ch-</div>
+<div id="kM"  class="kbd" OnCLick="kp('MUTE')" ><img src="images/36/volume-off.png" /></div>
+
+<div id="kred"  class="kbd" OnCLick="kp('RED')" >O</div>
+<div id="kgre"  class="kbd" OnCLick="kp('GRE')" >O</div>
+<div id="kyel"  class="kbd" OnCLick="kp('YEL')" >O</div>
+<div id="kblu"  class="kbd" OnCLick="kp('BLU')" >O</div>
+
+
+</body>
